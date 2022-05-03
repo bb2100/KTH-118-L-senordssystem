@@ -11,10 +11,7 @@ class User:
     def log_out(self):
         self.logged_in = False
 
-def init_users():
-    # Läser in alla användare från fil,
-    # skapar User-objekt av dem,
-    # returnerar lista med Users
+def init_users(): #loads all users from file, creates object "user" of them and returns a list of users
     passwords = []
     with open("users.txt", "r", encoding="utf-8") as file:
         for line in file.readlines():
@@ -50,11 +47,23 @@ def register():
         write.write(f"{username}/{password}\n")
     print ("Account successfully created!")
     
+def loggedin():
+    alternatives = input("Vad vill du göra?\n1: Kolla vilka som försökt logga in\n2: Byta lösenord\n3: Logga ut\n För att avsluta skriv något annat\n")
+    if (alternatives == "1"):
+        pass
 
+    if (alternatives == "2"):
+        pass
+
+    if (alternatives == "3"):
+        pass
+
+    else:
+        raise SystemExit("Programmet Avslutades")
 
 def main():
     users = init_users()
-    choice = input("För att logga in: skriv 1\nFör att registrera dig: skriv 2\nFör att avsluta: skriv något annat\nFör att kolla vilka som försökt logga in: skriv 3")
+    choice = input("Vad vill du göra?\n1: Logga in\n2: Registrera dig\nFör att avsluta skriv något annat\n")
     if (choice == "1"):
         login(users)
         print ("Du är nu inloggad!")
@@ -62,9 +71,6 @@ def main():
     if (choice == "2"):
         register()
     
-    if (choice == "3"):
-        login(users)
-
 
     else:
         raise SystemExit("Programmet Avslutades")
