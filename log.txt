@@ -1,0 +1,16 @@
+
+A user created the account test
+
+A user created the account FOOOOONEBBABFR
+
+A user successfully logged into bb2100
+
+A user successfully logged into bb2100 at 15:03:31
+
+A user successfully logged into bb2100 at 15:29:42
+
+A user tried to log in to bb2100 at 15:30:40 but had the wrong password
+
+A user successfully logged into bb2100 at 15:37:28
+
+A user successfully logged into test at 15:39:03
