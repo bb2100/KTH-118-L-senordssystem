@@ -14,3 +14,15 @@ A user tried to log in to bb2100 at 15:30:40 but had the wrong password
 A user successfully logged into bb2100 at 15:37:28
 
 A user successfully logged into test at 15:39:03
+
+A user successfully logged into test at 13:32:52
+
+A user successfully changed password for test at 13:32:52
+
+A user successfully logged into test at 13:34:14
+
+A user successfully changed password for test at 13:34:14
+
+A user successfully logged into test at 13:35:22
+
+A user successfully changed password for test at 13:35:22

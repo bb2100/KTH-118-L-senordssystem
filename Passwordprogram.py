@@ -36,7 +36,7 @@ class User:
                 with open("log.txt", "a", encoding="utf-8") as chalog:
                     chalog.write(f"\nA user successfully changed password for {self.username} at {current_time}\n")
 
-                loggedin()
+                loggedin(self)
 
             else:
                 print("The passwords does not match")
@@ -44,11 +44,14 @@ class User:
                 with open("log.txt", "a", encoding="utf-8") as chalogr:
                     chalogr.write(f"\nA user tried to change password for {self.username} at {current_time}\n")
 
-                loggedin()
+                #loggedin(self)
 
         else:
             print("The current password is incorrect")
-            loggedin()
+            #loggedin(self)
+    
+    def save(self):
+        return f"{self.username}/{self.password}\n"
         
 
 def init_users(): #loads all users from file, creates object "user" of them and returns a list of users
@@ -109,6 +112,11 @@ def loggedin(current_user):
     if (alternatives == "3"):
         pass
 
+def save_users(users : list[User]):
+
+    with open("users.txt", "w", encoding="utf-8") as f:
+        for user in users:
+            f.write(user.save())
     
 def main():
     users = init_users()
@@ -121,14 +129,14 @@ def main():
         else:
             pass
     
-
-    if (choice == "2"):
+    elif (choice == "2"):
         register()
-    
-    for password in users:
-        print(password.password)
+
     else:
+        save_users(users)
         raise SystemExit("Programmet Avslutades")
+
+    save_users(users)
 
 if __name__ == "__main__":
     main()
