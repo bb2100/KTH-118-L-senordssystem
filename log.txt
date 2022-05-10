@@ -26,3 +26,63 @@ A user successfully changed password for test at 13:34:14
 A user successfully logged into test at 13:35:22
 
 A user successfully changed password for test at 13:35:22
+
+A user successfully logged into test at 14:18:33
+
+A user successfully logged into test at 14:19:36
+
+A user tried to log in to hej at 14:23:40 but had the wrong password
+
+A user tried to log in to test2 at 14:24:14 but had the wrong password
+
+A user successfully logged into test at 14:25:22
+
+A user tried to log in to test at 14:25:35 but had the wrong password
+
+A user successfully logged into test at 14:27:32
+
+A user successfully logged into bb2100 at 14:27:32
+
+A user successfully logged into bb2100 at 14:28:13
+
+A user successfully changed password for bb2100 at 14:28:13
+
+A user tried to log in to bb2100 at 14:29:12 but had the wrong password
+
+A user tried to log in to bb2100 at 14:45:23 but had the wrong password
+
+A user successfully logged into bb2100 at 14:45:35
+
+A user successfully logged into bb2100 at 14:45:35
+
+A user successfully logged into bb2100 at 14:45:35
+
+A user successfully changed password for bb2100 at 14:45:35
+
+A user successfully logged into bb2100 at 14:50:02
+
+A user successfully changed password for bb2100 at 14:50:02
+
+A user successfully logged into bb2100 at 14:52:44
+
+A user successfully changed password for bb2100 at 14:52:44
+
+A user successfully logged into test at 15:00:03
+
+A user successfully logged into test at 15:00:03
+
+A user successfully changed password for test at 15:00:03
+
+A user successfully logged into bb2100 at 15:09:38
+
+A user successfully logged into bb2100 at 15:09:38
+
+A user successfully changed password for bb2100 at 15:09:38
+
+A user successfully logged into bb2100 at 15:13:24
+
+A user successfully changed password for bb2100 at 15:13:24
+
+A user successfully logged into bb2100 at 15:14:27
+
+A user successfully changed password for bb2100 at 15:14:27

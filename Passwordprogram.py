@@ -36,7 +36,7 @@ class User:
                 with open("log.txt", "a", encoding="utf-8") as chalog:
                     chalog.write(f"\nA user successfully changed password for {self.username} at {current_time}\n")
 
-                loggedin(self)
+                #loggedin(self)
 
             else:
                 print("The passwords does not match")
@@ -44,11 +44,11 @@ class User:
                 with open("log.txt", "a", encoding="utf-8") as chalogr:
                     chalogr.write(f"\nA user tried to change password for {self.username} at {current_time}\n")
 
-                #loggedin(self)
+                
 
         else:
             print("The current password is incorrect")
-            #loggedin(self)
+            
     
     def save(self):
         return f"{self.username}/{self.password}\n"
@@ -101,16 +101,21 @@ def register():
     with open("log.txt", "a", encoding="utf-8") as reglog:
         reglog.write(f"\nA user created the account {username} at {current_time}\n")
     
-def loggedin(current_user):
-    alternatives = input("Vad vill du göra?\n1: Kolla vilka som försökt logga in\npasswd: Byta lösenord\n3: Logga ut\n För att avsluta skriv något annat\n")
-    if (alternatives == "1"):
-        pass
+def loggedin(current_user : User):
+    alternatives = input("Vad vill du göra?\nlog: Kolla vilka som försökt logga in\npasswd: Byta lösenord\nlogout: Logga ut\n För att avsluta skriv något annat\n")
+    if (alternatives == "log"):
+        with open ("log.txt", "r", encoding="utf-8") as readlog:
+            for i in readlog.readlines():
+                print(i,"\n")
 
-    if (alternatives == "passwd"):
+    elif (alternatives == "passwd"):
         current_user.passwd()
 
-    if (alternatives == "3"):
+    elif (alternatives == "logout"):
         pass
+
+    else: 
+        raise SystemExit("Programmet Avslutades")
 
 def save_users(users : list[User]):
 
@@ -126,8 +131,7 @@ def main():
         if isinstance(current_user, User):
             print ("Du är nu inloggad!")
             loggedin(current_user)
-        else:
-            pass
+        
     
     elif (choice == "2"):
         register()
