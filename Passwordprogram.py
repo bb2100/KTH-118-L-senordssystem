@@ -25,7 +25,7 @@ class User:
         # Be om nytt lösenord igen
         # sätt self.password = nya lösenordet om ovan stämmer
         # LOGGA
-        current = input("Skriv in ditt nuvarande lösenord: ")
+        current = input("\nEnter your current password: ")
         if current == self.password:
             new = input("Enter your new passord: ")
             newcheck = input("Enter your new password again: ")
@@ -48,6 +48,9 @@ class User:
 
         else:
             print("The current password is incorrect")
+
+            with open("log.txt", "a", encoding="utf-8") as chalogr:
+                    chalogr.write(f"\nA user tried to change password for {self.username} at {current_time}\n")
             
     
     def save(self):
@@ -64,8 +67,8 @@ def init_users(): #loads all users from file, creates object "user" of them and 
     return passwords
 
 def login(users):
-    usernamelog = input("Skriv in ditt användarnamn:")
-    passwordlog = input("Skriv in ditt lösenord:")
+    usernamelog = input("\nEnter your username: ")
+    passwordlog = input("Enter your password: ")
     current_user = ""
     for user in users:
         if user.username == usernamelog and user.password == passwordlog:
@@ -92,7 +95,7 @@ def log():
     # vad returnas av login?
 
 def register():
-    username = input("Enter your new username: ")
+    username = input("\nEnter your new username: ")
     password = input("Enter your new password: ")
     with open("users.txt", "a", encoding="utf-8") as write:
         write.write(f"{username}/{password}\n")
@@ -101,12 +104,17 @@ def register():
     with open("log.txt", "a", encoding="utf-8") as reglog:
         reglog.write(f"\nA user created the account {username} at {current_time}\n")
     
+    raise SystemExit("The program ended.")
+
+    
+    
 def loggedin(current_user : User):
-    alternatives = input("Vad vill du göra?\nlog: Kolla vilka som försökt logga in\npasswd: Byta lösenord\nlogout: Logga ut\n För att avsluta skriv något annat\n")
+    alternatives = input("What do you want to do?\nlog: See account activity \npasswd: Change password\nlogout: log out \n To end, write anything else. \nWrite the command in the beginning of the alternatives: ")
     if (alternatives == "log"):
         with open ("log.txt", "r", encoding="utf-8") as readlog:
             for i in readlog.readlines():
-                print(i,"\n")
+                print(i)
+        print("Closing software, please log in again!")
 
     elif (alternatives == "passwd"):
         current_user.passwd()
@@ -115,7 +123,7 @@ def loggedin(current_user : User):
         pass
 
     else: 
-        raise SystemExit("Programmet Avslutades")
+        raise SystemExit("The program ended.")
 
 def save_users(users : list[User]):
 
@@ -125,20 +133,20 @@ def save_users(users : list[User]):
     
 def main():
     users = init_users()
-    choice = input("Vad vill du göra?\n1: Logga in\n2: Registrera dig\nFör att avsluta skriv något annat\n")
-    if (choice == "1"):
+    choice = input("What do you want to do?\nlogin: Log in\nreg: Register\n To end, write anything else. \nWrite the command in the beginning of the alternatives: ")
+    if (choice == "login"):
         current_user = login(users)
         if isinstance(current_user, User):
-            print ("Du är nu inloggad!")
+            print ("You're now logged in!\n")
             loggedin(current_user)
         
     
-    elif (choice == "2"):
+    elif (choice == "reg"):
         register()
 
     else:
         save_users(users)
-        raise SystemExit("Programmet Avslutades")
+        raise SystemExit("The program ended.")
 
     save_users(users)
 
