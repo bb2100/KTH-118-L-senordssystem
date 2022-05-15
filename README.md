@@ -1,26 +1,19 @@
-# KTH lösenordssystem
+# KTH Passwordsystem
 
 ## Description
 
-
 This program is written in python. It is a account creator and log in system made to simulate a working account creator with the function to track who has tried to log onto your account. Since it has no form of security it is not recommended to use in a serious matter.
 
-## Technology/Languages/Built with (Teknologier/Språk/Byggt med - välj en)
-
-***Här kan du beskriva vilka språk som driver vilka delar av projektet, exempelvis att du skrivit frontend med JavaScript och Python för backend. Det kan även vara nyttigt att berätta vilka ramverk eller bibliotek du använt här för de olika delarna. För exemplena givna är React (för JS) och Flask (Python) bra att nämna. Utelämna add-ons eller plugins, lämna dessa till Acknowledgements.***
+## Technology/Languages/Built with
 
 - Python - The whole program
 - Markdown - This description file
 
-## Requirements/Prerequisites (Krav)
-
-***Vad krävs för att köra ditt program? Lista bara kraven.***
+## Requirements/Prerequisites 
 
 - Python 3.9+
 
 ## Installation
-
-***För att köra programmet listar du här vad som behövs och hur det installeras. Exempel:***
 
 Exempel 1: 
 
@@ -48,14 +41,11 @@ pip install Flask
 pip install pygame
 ```
 
-## Code conventions (Kodkonvention)
+## Code conventions
 
-***Detta är överkurs, men här kan du lista exempelvis hur filerna ska vara strukturerade, hur namngivning och kommentarer skrivs och massvis av annat. (Kan vara bra att förtydliga att PEP8 efterföljs.)***
 File structure does not matter, the important thing is the filenames. The logging file should be named "log.txt" and the user file should be named "users.txt". If this were to be changed, it has to be changed everywhere it is used in the code too. The program is written following PEP8.
 
-## Hur det fungerar (Usage)
-
-***Använd detta utrymme för att visa användbara exempel av hur projektet kan användas. Skärmdumpar, kodexempel och demos passar in här. Du kan också länka till fler resurser, exempelvis en dokumentation.***
+## How it works
 
 Users are saved as username/password in the "users.txt" file
 ![](Screenshots/users.png)
@@ -67,65 +57,60 @@ Log is saved like this (see screenshot below) in the "log.txt" file
 This is how easy it is to change password:
 ![](Screenshots/Passwordchanging.png)
 
-## Example (exempelkörning)
+## Example run
+What do you want to do?
+login: Log in
+reg: Register
+ To end, write anything else.
+Write the command in the beginning of the alternatives: login
 
-***Visa gärna, genom ett kodblock från din konsol, eller en bild, hur en exempelkörning kan gå till.***
+Enter your username: test
+Enter your password: test
+You're now logged in!
 
-## To do/Roadmap (Att göra/Plan)
+What do you want to do?
+log: See account activity
+passwd: Change password
+logout: log out
+ To end, write anything else.
+Write the command in the beginning of the alternatives: logout
+What do you want to do?
+login: Log in
+reg: Register
+ To end, write anything else.
+Write the command in the beginning of the alternatives: o
+The program ended.
 
-***Det kan vara nyttigt att få andra som läser om projektet att få veta vad du saknar just nu i programmet. Gör detta gärna genom en lista där färdiga saker strukits över.***
-Exempel:
+## To do/Roadmap
 
-- [x] Påbörja exempelreadme
-- [ ] Hitta fler exempelrubriker
-- [ ] Kom på bättre exempel
-- [ ] Ge exempel på projekt med fullständig readme
-- [ ] Ytterligare språk
-- [x] Svenska
-- [ ] Engelska
+- [x] Working login
+- [x] Working register
+- [x] Passwordchanging
+- [ ] Usernamechanging
+- [ ] Individual log file
+- [ ] Log with date
+- [ ] Remove account
+- [x] English
+- [ ] Languages
 
-## Changelog
 
-***Det kan vara rimligt att inkludera vad som har förändrats genom de olika iterationerna som ditt projekt gått igenom. Detta kan antingen göras i din README eller så kan du inkludera en CHANGELOG.md.***
+## Contribution
 
-***I changelogen ska varje rubrik vara en version. Under varje version bör du inkludera vad du lagt till eller ändrat på (added or changed) under en rubrik samt vad du tagit bort (removed) under en annan. Exempel: ***
+Since this is a program made as a school project it has not been graded yet, no pull requests are allowed. As soon as it has been graded, this will be allowed.
 
-### Version 1.0.1
+In the event of major changes, I want an issue to be opened up for discussion about what should be changed.
 
-#### Tillagt eller ändrat
-
-- La till avsnitt om changelog
-- La till avsnitt om kodkonventioner
-
-#### Borttaget
-
-- Tog bort tidigare rubriker som inte såg bra ut.
-- Tog bort felaktig rubrik om innehållsförteckning
-
-## Att bidra (Contribution)
-
-***Inom programmeringsvärlden är det ofta populärt att man vill utveckla andras projekt och bidra till förbättring. För att underlätta detta är det bra om det i READMEn förklaras om det är tillåtet, och om det är det hur en går till väga för att kunna göra det. Detta avsnitt skulle se ut som följande:*** 
-
-Då bedömning ännu ej är gjord på uppgiften så tillåts inga pull requests. Så fort bedömning är gjord kommer detta tillåtas.  
-
-Vid större förändringar önskar jag att en issue öppnas för diskussion om vad som ska förändras.
-
-## Licens (License)
+## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-## Contact (Kontakt)
+## Contact
 
-***Skriv här hur du blir kontaktad ifall det finns frågor om projektet***
+Albin EKlund - Instagram: @u_know_affe - Discord: bb2100#4433
 
-Ditt Namn - @din_twitter (eller discord? annan plattform?) - email@example.com
+Projektlänk: https://github.com/bb2100/KTH-118-L-senordssystem
 
-Projektlänk: https://github.com/ditt_anv/reponamn
+## Acknowledgments
 
-## Erkännanden (Acknowledgments)
-
-***Här kan du lista resurser eller personer som har hjälpt dig med projektet. Det kan vara länkar till tutorials eller dokumentation, eller bara någon annans profil som du vill uppmärksamma. Har du inget som behöver tas här så kan du strunta i rubriken. ***
-
-- Mamma och Pappa
-- [En jättebra låt](https://www.youtube.com/watch?v=cvh0nX08nRw)
-- Dan Hermansson
+- Niclas Lund
+- [The task](https://www.csc.kth.se/utbildning/kth/kurser/DD1310/prgs14/P/118.pdf)

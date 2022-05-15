@@ -4,3 +4,27 @@ A user successfully logged into test at 16:06:06
 A user successfully logged into test at 16:07:30
 
 A user tried to change password for test at 16:07:30
+
+A user tried to log in to bb2100 at 14:53:40 but had the wrong password
+
+A user created the account bb2100 at 14:54:20
+
+A user successfully logged into test at 14:54:41
+
+A user successfully logged into test at 14:55:16
+
+A user successfully logged into test at 14:56:17
+
+A user successfully logged into test at 14:59:44
+
+A user successfully logged into test at 14:59:44
+
+A user created the account äckel at 15:00:16
+
+A user successfully logged into test at 15:00:42
+
+A user created the account bäbis at 16:01:11
+
+A user successfully logged into bäbis at 16:01:24
+
+A user successfully changed password for bäbis at 16:01:24
