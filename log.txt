@@ -28,3 +28,13 @@ A user created the account bäbis at 16:01:11
 A user successfully logged into bäbis at 16:01:24
 
 A user successfully changed password for bäbis at 16:01:24
+
+A user tried to log in to brodyd2 at 13:45:25 but had the wrong password
+
+A user successfully logged into äckel at 13:45:55
+
+A user successfully logged into äckel at 13:46:23
+
+A user successfully changed password for äckel at 13:46:23
+
+A user successfully logged into äckel at 13:46:47
